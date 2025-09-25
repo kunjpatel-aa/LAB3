@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 3</title>
+    <style>
+        /* General Body and Font Styles to match the image */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: black;
+    color: #333;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #ddebdc; /* Exact light green from image */
+    padding: 12px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the nav content */
+}
+
+.nav-left a, .nav-right a {
+    color: #3a3a3a;
+    text-decoration: none;
+    padding: 5px 12px;
+    font-size: 16px;
+}
+
+/* Main Grid Container Layout */
+.grid-container {
+    display: grid;
+    padding: 20px;
+    gap: 15px;
+    /* Set a height that fills most of the screen below the header */
+    height: calc(100vh - 100px); 
+    max-width: 1240px;
+    margin: 0 auto;
+
+    /* Define columns: first is narrower, next two are equal and wider */
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    /* Define rows: top row is for images, bottom area is larger for text */
+    grid-template-rows: 1fr 2fr;
+
+    /* Assign grid areas for clean and readable placement */
+    grid-template-areas:
+        "rocket solar rover"
+        "rocket text text";
+}
+
+/* Base style for all grid items */
+.grid-item {
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Using your local image names --- */
+
+.item-rocket {
+    grid-area: rocket;
+    background-image: url('rocket.jpg'); /* Rocket image */
+}
+
+.item-solar-system {
+    grid-area: solar;
+    background-image: url('https://cdn.educba.com/academy/wp-content/uploads/2024/04/Components-of-the-Solar-System.jpg'); /* Solar system image */
+}
+
+.item-rover {
+    grid-area: rover;
+    background-image: url('https://cdn.wallpapersafari.com/90/81/lma9eY.jpg'); /* Rover image */
+}
+
+/* TEXT BLOCK STYLE (no scroll, small font) */
+.item-text {
+    grid-area: text;
+    background-color: #708090; /* Exact Slate Gray from image */
+    color: #f0f0f0;
+    padding: 25px 30px;
+    overflow: hidden; /* This prevents the scrollbar */
+    font-size: 13.5px; /* Smaller font */
+    line-height: 1.5; /* Adjusted line height */
+}
+
+.item-text p {
+    margin-bottom: 1em; /* Space between paragraphs */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #555;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+            </div>
+            <div class="nav-right">
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <div class="grid-item item-rocket"></div>
+        <div class="grid-item item-solar-system"></div>
+        <div class="grid-item item-rover"></div>
+        <div class="grid-item item-text">
+            <p>
+                Do culpa culpa sunt labore esse quis sint est ullamco reprehenderit enim. Fugiat nulla nostrud et laboris anim dolor ea dolore. Ea dolor eu sunt veniam. Fugiat incididunt consectetur magna proident deserunt do veniam mollit. Qui aute velit incididunt nostrud enim laboris. Laborum tempor laboris in et deserunt cillum culpa culpa excepteur. Est irure non reprehenderit eiusmod aliqua ex fugiat. Ipsum mollit ad laboris laborum ullamco duis commodo esse. Culpa eu ex proident reprehenderit commodo veniam in in. Excepteur sint in lorem sint. Sunt tempor culpa qui veniam anim eiusmod deserunt minim pariatur et.
+            </p>
+            <p>
+                Exercitation excepteur reprehenderit ad consectetur consequat enim minim dolor ut. Non laboris occaecat mollit quis culpa. Occaecat deserunt laboris esse id pariatur id veniam ut. Ex lorem eu quis non. Ex laboris occaecat mollit esse nulla in non. Reprehenderit amet cupidatat in mollit. Minim ex enim velit commodo dolor ea. Ex anim laborum eu ea quis velit nostrud. Quis labore quis occaecat quis. Cillum eu culpa incididunt consequat voluptate. Commodo ullamco consequat mollit et. Aliqua excepteur eiusmod ex reprehenderit. Magna voluptate ullamco in sit amet eiusmod. Laboris irure in amet incididunt amet culpa laboris irure. Cillum ex ea nulla laboris id incididunt sunt culpa. Tempor minim excepteur cillum.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
